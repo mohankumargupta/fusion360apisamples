@@ -1,0 +1,50 @@
+🔗  Navigated to https://help.autodesk.com/view/fusion360/ENU/?guid=SampleList🔍  Scrolled down the page by one page🔍  Scrolled down the page by one page📄  Extracted from page
+: ```json
+[
+  {
+    "name": "Create circle by center and radius API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm"
+  },
+  {
+    "name": "Create Circle By 3 Tangents API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm"
+  },
+  {
+    "name": "API Sample that demonstrates creating sketch lines in various ways.",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm"
+  },
+  {
+    "name": "Project To Surface API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm"
+  },
+  {
+    "name": "Sketch Chamfer API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm"
+  },
+  {
+    "name": "Sketch fillet and offset API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm"
+  },
+  {
+    "name": "Sketch Intersect API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm"
+  },
+  {
+    "name": "Sketch Point API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm"
+  },
+  {
+    "name": "Sketch Sample API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm"
+  },
+  {
+    "name": "Sketch spline through points creation and relative functions API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm"
+  },
+  {
+    "name": "Sketch Text API Sample",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm"
+  }
+]
+```
+[{"name": "Create circle by center and radius API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm"}, {"name": "Create Circle By 3 Tangents API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm"}, {"name": "API Sample that demonstrates creating sketch lines in various ways.", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm"}, {"name": "Project To Surface API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm"}, {"name": "Sketch Chamfer API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm"}, {"name": "Sketch fillet and offset API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm"}, {"name": "Sketch Intersect API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm"}, {"name": "Sketch Point API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm"}, {"name": "Sketch Sample API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm"}, {"name": "Sketch spline through points creation and relative functions API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm"}, {"name": "Sketch Text API Sample", "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm"}]
