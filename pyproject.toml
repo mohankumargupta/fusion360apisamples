@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fusion360apisamples"
+version = "0.0.1"
+dependencies = ["browser-use"]
+
+[tool.setuptools]
+py-modules = []
