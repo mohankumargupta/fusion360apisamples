@@ -1,0 +1,48 @@
+🔗  Navigated to https://help.autodesk.com/view/fusion360/ENU/?guid=SampleList🔍  Scrolled down the page by one page🔍  Scrolled to text: Sketches🖱️  Clicked button with index 98: Create circle by center and radius API Sample🖱️  Clicked button with index 137: Python📄  Extracted from page
+: ```json
+{
+  "code_samples": [
+    {
+      "language": "Python",
+      "code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n        \n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        \n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw some circles.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByCenterRadius(adsk.core.Point3D.create(0, 0, 0), 2)\n        circle2 = circles.addByCenterRadius(adsk.core.Point3D.create(8, 3, 0), 3)\n\n        # Add a circle at the center of one of the existing circles.\n        circle3 = circles.addByCenterRadius(circle2.centerSketchPoint, 4)\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+    },
+    {
+      "language": "C++",
+      "code": "#include <Core/Application/Application.h>\n#include <Core/Application/Document.h>\n#include <Core/Application/Documents.h>\n#include <Core/Geometry/Point3D.h>\n#include <Core/UserInterface/UserInterface.h>\n#include <Fusion/Components/Component.h>\n#include <Fusion/Construction/ConstructionPlane.h>\n#include <Fusion/Fusion/Design.h>\n#include <Fusion/Sketch/Sketch.h>\n#include <Fusion/Sketch/SketchCircle.h>\n#include <Fusion/Sketch/SketchCircles.h>\n#include <Fusion/Sketch/SketchCurves.h>\n#include <Fusion/Sketch/Sketches.h>\n#include <Fusion/Sketch/SketchPoint.h>\n\nusing namespace adsk::core;\nusing namespace adsk::fusion;\n\nPtr<UserInterface> ui;\n\nextern \"C\" XI_EXPORT bool run(const char* context)\n{\n    Ptr<Application> app = Application::get();\n    if (!app)\n        return false;\n\n    ui = app->userInterface();\n    if (!ui)\n        return false;\n\n    Ptr<Documents> docs = app->documents();\n    if (!docs)\n        return false;\n\n    // Create a document.\n    Ptr<Document> doc = docs->add(DocumentTypes::FusionDesignDocumentType);\n    if (!doc)\n        return false;\n\n    Ptr<Design> design = app->activeProduct();\n    if (!design)\n        return false;\n\n    // Get the root component of the active design\n    Ptr<Component> rootComp = design->rootComponent();\n    if (!rootComp)\n        return false;\n\n    // Create sketch\n    Ptr<Sketches> sketches = rootComp->sketches();\n    if (!sketches)\n        return false;\n\n    Ptr<Sketch> sketch = sketches->add(rootComp->xYConstructionPlane());\n    if (!sketch)\n        return false;\n\n    Ptr<SketchCurves> curves = sketch->sketchCurves();\n    if (!curves)\n        return false;\n\n    // Draw some circles.\n    Ptr<SketchCircles> circles = curves->sketchCircles();\n    if (!circles)\n        return false;\n\n    Ptr<SketchCircle> circle1 = circles->addByCenterRadius(Point3D::create(0, 0, 0), 2);\n    if (!circle1)\n        return false;\n\n    Ptr<SketchCircle> circle2 = circles->addByCenterRadius(Point3D::create(8, 3, 0), 3);\n    if (!circle2)\n        return false;\n\n    // Add a circle at the center of one of the existing circles.\n    Ptr<SketchCircle> circle3 = circles->addByCenterRadius(circle2->centerSketchPoint(), 4);\n    if (!circle3)\n        return false;\n\n    return true;\n}\n\n#ifdef XI_WIN\n\n#include <windows.h>\n\nBOOL APIENTRY DllMain(HMODULE hmodule, DWORD reason, LPVOID reserved)\n{\n    switch (reason)\n    {\n    case DLL_PROCESS_ATTACH:\n    case DLL_THREAD_ATTACH:\n    case DLL_THREAD_DETACH:\n    case DLL_PROCESS_DETACH:\n        break;\n    }\n    return TRUE;\n}\n\n#endif // XI_WIN"
+    }
+  ]
+}
+```
+START CODESAMPLE
+Create circle by center and radius API Sample.py
+import adsk.core, adsk.fusion, traceback
+
+def run(context):
+    ui = None
+    try:
+        app = adsk.core.Application.get()
+        ui = app.userInterface
+        
+        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
+        
+        design = app.activeProduct
+
+        # Get the root component of the active design.
+        rootComp = design.rootComponent
+
+        # Create a new sketch on the xy plane.
+        sketches = rootComp.sketches
+        xyPlane = rootComp.xYConstructionPlane
+        sketch = sketches.add(xyPlane)
+
+        # Draw some circles.
+        circles = sketch.sketchCurves.sketchCircles
+        circle1 = circles.addByCenterRadius(adsk.core.Point3D.create(0, 0, 0), 2)
+        circle2 = circles.addByCenterRadius(adsk.core.Point3D.create(8, 3, 0), 3)
+
+        # Add a circle at the center of one of the existing circles.
+        circle3 = circles.addByCenterRadius(circle2.centerSketchPoint, 4)
+    except:
+        if ui:
+            ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
+END CODESAMPLE

@@ -40,13 +40,14 @@ async def run_search():
 	history = await agent.run(max_steps=25)
 	h = history.history
 	#final_result = history.final_result()
-	with open("final_results.txt", "w") as f:
-		for i in len(h):
-			content = h[i].result[-1].extracted_content
-			f.write(content)
+	with open("final_results.txt", "w", encoding="utf-8") as f:
+		for i in h:
+			content = i.result[-1].extracted_content
+			if content:
+				f.write(content)
 
 
-	#history.save_to_file("history.json")
+	history.save_to_file("history.json")
 
 if __name__ == '__main__':
 	asyncio.run(run_search())
