@@ -19,6 +19,10 @@ TASK = """
 
 What I need is code samples under the section name "Sketchs"(not Design:Sketch).
 
+This is a 2-step process.
+
+**First step**
+
 First task I need you to do is remember the code sample names and urls.
 
 Here is where you get them
@@ -27,7 +31,14 @@ Here is where you get them
 - In the main content area of page, 
   Each link under the heading 'Sketches' (not Design:Sketch)
 
-The final result will be a json object with schema [{sample name, sample url}]
+The final result for step 1 will be a json object with schema [{sample name, sample url}]
+
+**Second step**
+Now I need you to go the sample urls 1 by 1 in step1 and collect sample code for each. 
+Remember to click on the Python tab on the sample code page before copying code.
+
+The final result for this step 2 will be a json object with schema [{sample name, sample url, sample code}]
+
 """
 
 async def run_search():
