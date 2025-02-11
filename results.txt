@@ -1,7 +1,7 @@
 🔗  Navigated to https://help.autodesk.com/view/fusion360/ENU/?guid=SampleList🔍  Scrolled down the page by one page🔍  Scrolled down the page by one page📄  Extracted from page
 : ```json
 {
-  "sketches_links": [
+  "Sketches": [
     "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm",
     "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm",
     "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm",
@@ -16,141 +16,6 @@
   ]
 }
 ```
-📄  Extracted from page
-: ```json
-{
-  "sketch_samples": [
-    "Create circle by center and radius API Sample",
-    "Create Circle By 3 Tangents API Sample",
-    "API Sample that demonstrates creating sketch lines in various ways.",
-    "Project To Surface API Sample",
-    "Sketch Chamfer API Sample",
-    "Sketch fillet and offset API Sample",
-    "Sketch Intersect API Sample",
-    "Sketch Point API Sample",
-    "Sketch Sample API Sample",
-    "Sketch spline through points creation and relative functions API Sample",
-    "Sketch Text API Sample"
-  ]
-}
-```
-🔗  Navigated to https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm📄  Extracted from page
-: ```json
-{
-  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n        \n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        \n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw some circles.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByCenterRadius(adsk.core.Point3D.create(0, 0, 0), 2)\n        circle2 = circles.addByCenterRadius(adsk.core.Point3D.create(8, 3, 0), 3)\n\n        # Add a circle at the center of one of the existing circles.\n        circle3 = circles.addByCenterRadius(circle2.centerSketchPoint, 4)\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
-}
-```
-🔙  Navigated back📄  Extracted from page
-: ```json
-{
-  "Sketches": [
-    {
-      "name": "Create circle by center and radius API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm"
-    },
-    {
-      "name": "Create Circle By 3 Tangents API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm"
-    },
-    {
-      "name": "API Sample that demonstrates creating sketch lines in various ways.",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm"
-    },
-    {
-      "name": "Project To Surface API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm"
-    },
-    {
-      "name": "Sketch Chamfer API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm"
-    },
-    {
-      "name": "Sketch fillet and offset API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm"
-    },
-    {
-      "name": "Sketch Intersect API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm"
-    },
-    {
-      "name": "Sketch Point API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm"
-    },
-    {
-      "name": "Sketch Sample API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm"
-    },
-    {
-      "name": "Sketch spline through points creation and relative functions API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm"
-    },
-    {
-      "name": "Sketch Text API Sample",
-      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm"
-    }
-  ]
-}
-```
-📄  Extracted from page
-: ```json
-[
-  {
-    "sample name": "Create circle by center and radius API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Create Circle By 3 Tangents API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "API Sample that demonstrates creating sketch lines in various ways.",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Project To Surface API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Chamfer API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch fillet and offset API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Intersect API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Point API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Sample API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch spline through points creation and relative functions API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Text API Sample",
-    "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm",
-    "sample code": null
-  }
-]
-```
 🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm🔄  Switched to tab 1📄  Extracted from page
 : ```json
 {
@@ -163,64 +28,68 @@
   "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches;\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw three lines.\n        lines = sketch.sketchCurves.sketchLines;\n        line1 = lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(3, 1, 0))\n        line2 = lines.addByTwoPoints(adsk.core.Point3D.create(4, 3, 0), adsk.core.Point3D.create(2, 4, 0))\n        line3 = lines.addByTwoPoints(adsk.core.Point3D.create(-1, 0, 0), adsk.core.Point3D.create(0, 4, 0))\n\n        # Draw circle tangent to the lines.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByThreeTangents(line1, line2, line3, adsk.core.Point3D.create(0,0,0))\n\n        # Apply tangent contstraints to maintain the relationship.\n        constraints = sketch.geometricConstraints\n        constraints.addTangent(circle1, line1)\n        constraints.addTangent(circle1, line2)\n        constraints.addTangent(circle1, line3)\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
 }
 ```
-🔄  Switched to tab 2⌨️  Sent keys: Control+w🔍  Scrolled down the page by one page📄  Extracted from page
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm🔄  Switched to tab 3📄  Extracted from page
 : ```json
-[
-  {
-    "sample name": "Create circle by center and radius API Sample",
-    "sample url": "?guid=GUID-ecd3b76b-19f7-4efa-8a02-087c16da246f",
-    "sample code": null
-  },
-  {
-    "sample name": "Create Circle By 3 Tangents API Sample",
-    "sample url": "?guid=GUID-982b8eb4-fad6-11e4-bbf8-3417ebd3d5be",
-    "sample code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches;\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw three lines.\n        lines = sketch.sketchCurves.sketchLines;\n        line1 = lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(3, 1, 0))\n        line2 = lines.addByTwoPoints(adsk.core.Point3D.create(4, 3, 0), adsk.core.Point3D.create(2, 4, 0))\n        line3 = lines.addByTwoPoints(adsk.core.Point3D.create(-1, 0, 0), adsk.core.Point3D.create(0, 4, 0))\n\n        # Draw circle tangent to the lines.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByThreeTangents(line1, line2, line3, adsk.core.Point3D.create(0,0,0))\n\n        # Apply tangent contstraints to maintain the relationship.\n        constraints = sketch.geometricConstraints\n        constraints.addTangent(circle1, line1)\n        constraints.addTangent(circle1, line2)\n        constraints.addTangent(circle1, line3)\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
-  },
-  {
-    "sample name": "API Sample that demonstrates creating sketch lines in various ways.",
-    "sample url": "?guid=GUID-98e163be-fd07-11e4-9c39-3417ebd3d5be",
-    "sample code": null
-  },
-  {
-    "sample name": "Project To Surface API Sample",
-    "sample url": "?guid=GUID-ee5d099e-6b51-11e7-ada4-6c0b84aa5a3f",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Chamfer API Sample",
-    "sample url": "?guid=GUID-79d9183a-a9e7-11e5-83a9-f8b15aaacd97",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch fillet and offset API Sample",
-    "sample url": "?guid=GUID-e20ca15a-fd06-11e4-aaf7-3417ebd3d5be",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Intersect API Sample",
-    "sample url": "?guid=GUID-bed462f4-6b51-11e7-bc60-6c0b84aa5a3f",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Point API Sample",
-    "sample url": "?guid=GUID-79d9183a-a9e7-11e5-83a9-f8b156d7cd97",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Sample API Sample",
-    "sample url": "?guid=GUID-da476794-86f9-11e7-937e-6c0b84aa5a3f",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch spline through points creation and relative functions API Sample",
-    "sample url": "?guid=GUID-c3d4a306-fade-11e4-8e56-3417ebd3d5be",
-    "sample code": null
-  },
-  {
-    "sample name": "Sketch Text API Sample",
-    "sample url": "?guid=GUID-a611130a-a957-11e5-ac5a-f8b156d7cd97",
-    "sample code": null
-  }
-]
+{
+  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches;\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw two connected lines.\n        lines = sketch.sketchCurves.sketchLines;\n        line1 = lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(3, 1, 0))\n        line2 = lines.addByTwoPoints(line1.endSketchPoint, adsk.core.Point3D.create(1, 4, 0))\n\n        # Draw a rectangle by two points.\n        recLines = lines.addTwoPointRectangle(adsk.core.Point3D.create(4, 0, 0), adsk.core.Point3D.create(7, 2, 0))\n\n        # Use the returned lines to add some constraints.\n        sketch.geometricConstraints.addHorizontal(recLines.item(0))\n        sketch.geometricConstraints.addHorizontal(recLines.item(2))\n        sketch.geometricConstraints.addVertical(recLines.item(1))\n        sketch.geometricConstraints.addVertical(recLines.item(3))\n        sketch.sketchDimensions.addDistanceDimension(recLines.item(0).startSketchPoint, recLines.item(0).endSketchPoint,\n                                                     adsk.fusion.DimensionOrientations.HorizontalDimensionOrientation,\n                                                     adsk.core.Point3D.create(5.5, -1, 0));\n\n        # Draw a rectangle by three points.\n        recLines = lines.addThreePointRectangle(adsk.core.Point3D.create(8, 0, 0), adsk.core.Point3D.create(11, 1, 0), adsk.core.Point3D.create(9, 3, 0))\n\n        # Draw a rectangle by a center point.\n        recLines = lines.addCenterPointRectangle(adsk.core.Point3D.create(14, 3, 0), adsk.core.Point3D.create(16, 4, 0))\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
 ```
-[{"sample name": "Create circle by center and radius API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm", "sample code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n        \n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        \n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw some circles.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByCenterRadius(adsk.core.Point3D.create(0, 0, 0), 2)\n        circle2 = circles.addByCenterRadius(adsk.core.Point3D.create(8, 3, 0), 3)\n\n        # Add a circle at the center of one of the existing circles.\n        circle3 = circles.addByCenterRadius(circle2.centerSketchPoint, 4)\n    except:\n        if ui:\n            ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))"}, {"sample name": "Create Circle By 3 Tangents API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm", "sample code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches;\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw three lines.\n        lines = sketch.sketchCurves.sketchLines;\n        line1 = lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(3, 1, 0))\n        line2 = lines.addByTwoPoints(adsk.core.Point3D.create(4, 3, 0), adsk.core.Point3D.create(2, 4, 0))\n        line3 = lines.addByTwoPoints(adsk.core.Point3D.create(-1, 0, 0), adsk.core.Point3D.create(0, 4, 0))\n\n        # Draw circle tangent to the lines.\n        circles = sketch.sketchCurves.sketchCircles\n        circle1 = circles.addByThreeTangents(line1, line2, line3, adsk.core.Point3D.create(0,0,0))\n\n        # Apply tangent contstraints to maintain the relationship.\n        constraints = sketch.geometricConstraints\n        constraints.addTangent(circle1, line1)\n        constraints.addTangent(circle1, line2)\n        constraints.addTangent(circle1, line3)\n    except:\n        if ui:\n            ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))"}, {"sample name": "API Sample that demonstrates creating sketch lines in various ways.", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm", "sample code": null}, {"sample name": "Project To Surface API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm", "sample code": null}, {"sample name": "Sketch Chamfer API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm", "sample code": null}, {"sample name": "Sketch fillet and offset API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm", "sample code": null}, {"sample name": "Sketch Intersect API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm", "sample code": null}, {"sample name": "Sketch Point API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm", "sample code": null}, {"sample name": "Sketch Sample API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm", "sample code": null}, {"sample name": "Sketch spline through points creation and relative functions API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm", "sample code": null}, {"sample name": "Sketch Text API Sample", "sample url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm", "sample code": null}]
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm🔄  Switched to tab 4📄  Extracted from page
+: ```json
+{
+  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n        \n        # Create a document.\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n \n        product = app.activeProduct\n        design = adsk.fusion.Design.cast(product)\n\n        # Get the root component of the active design\n        rootComp = design.rootComponent\n\n        allOccs = rootComp.occurrences\n        transform = adsk.core.Matrix3D.create()\n        \n        # Create three components under root component\n        occ1 = allOccs.addNewComponent(transform)\n        subComp1 = occ1.component\n        occ2 = allOccs.addNewComponent(transform)\n        subComp2 = occ2.component\n        occ3 = allOccs.addNewComponent(transform)\n        subComp3 = occ3.component\n      \n        # Create a sketch in sub component 1\n        sketches1 = subComp1.sketches\n        sketch1 = sketches1.add(rootComp.yZConstructionPlane)\n        \n        # Get sketch lines\n        sketchLines = sketch1.sketchCurves.sketchLines\n        \n        # Create sketch rectangle\n        startPoint = adsk.core.Point3D.create(-8.0, 0, 0)\n        endPoint = adsk.core.Point3D.create(8.0, 8.0, 0)\n        sketchLines.addTwoPointRectangle(startPoint, endPoint)\n        \n        # Get the profile of the first sketch\n        prof1 = sketch1.profiles.item(0)\n        \n        # Create an extrusion input\n        extrudes1 = subComp1.features.extrudeFeatures\n        extInput1 = extrudes1.createInput(prof1, adsk.fusion.FeatureOperations.NewBodyFeatureOperation)\n        \n        # Define that the extent is a distance extent of 2 cm\n        distance1 = adsk.core.ValueInput.createByReal(2.0)\n        # Set the distance extent\n        extInput1.setDistanceExtent(False, distance1)\n        # Set the extrude type to be solid\n        extInput1.isSolid = True\n        \n        # Create the extrusion\n        ext1 = extrudes1.add(extInput1)\n        \n        # Create construction plane\n        planes = rootComp.constructionPlanes\n        planeInput = planes.createInput()\n        offsetValue = adsk.core.ValueInput.createByReal(8.0)\n        planeInput.setByOffset(rootComp.yZConstructionPlane, offsetValue)\n        plane = planes.add(planeInput)\n\n         # Create a sketch in sub component 2\n        sketches2 = subComp2.sketches\n        sketch2 = sketches2.add(plane)\n        \n        # Create the spline.\n        points = adsk.core.ObjectCollection.create()\n        points.add(adsk.core.Point3D.create(0, 8, 0))\n        points.add(adsk.core.Point3D.create(5, 6, 0))\n        points.add(adsk.core.Point3D.create(-5, 5, 0))\n        \n        sketch2Curves = sketch2.sketchCurves\n        spline = sketch2Curves.sketchFittedSplines.add(points)\n        \n        # Create sketch rectangle\n        sketch2Lines = sketch2Curves.sketchLines\n        startPoint2 = adsk.core.Point3D.create(-4, 2, 0)\n        endPoint2 = adsk.core.Point3D.create(3, 4, 0)\n        sketch2Lines.addTwoPointRectangle(startPoint2, endPoint2)\n        \n        # Get the profile of the second sketch\n        prof2 = sketch2.profiles.item(0)\n        \n        # Create an extrusion input       \n        extrudes2 = subComp2.features.extrudeFeatures\n        extInput2 = extrudes2.createInput(prof2, adsk.fusion.FeatureOperations.NewBodyFeatureOperation)\n        \n        # Define that the extent is a distance extent of 2 cm\n        extent_distance_2 = adsk.fusion.DistanceExtentDefinition.create(adsk.core.ValueInput.createByString(\"2cm\"))\n        # Define that the taple angle is 10 degree\n        deg10 = adsk.core.ValueInput.createByString(\"10 deg\")\n\n        extInput2.setOneSideExtent(extent_distance_2, adsk.fusion.ExtentDirections.PositiveExtentDirection, deg10)\n        \n        # Set the extrude type to be solid\n        extInput2.isSolid = True\n\n        # Create the extrusion\n        ext2 = extrudes2.add(extInput2)\n        \n        # Get the body with the first extrude\n        body = ext1.bodies.item(0)\n        \n        # Get faces\n        faceList = []\n        for face in body.faces:\n            faceList.append(face)\n\n        # Get curves\n        curveList = []\n        for curve in sketch2Curves:\n            curveList.append(curve)\n        \n        # Get points\n        for point in sketch2.sketchPoints:\n            curveList.append(point)\n        \n        # Get the body with the second extrude\n        body2 = ext2.bodies.item(0)\n        \n        # Get eges\n        for edge in body2.edges:\n            curveList.append(edge)\n        \n        # Get construction axis\n        curveList.append(rootComp.yConstructionAxis)\n        \n        # Get construction point\n        curveList.append(rootComp.originConstructionPoint)\n        \n        sketches3 = subComp3.sketches\n        # Create a sketch in sub component 3\n        skAlongVecProject = sketches3.add(rootComp.yZConstructionPlane)\n        # sketch project to surface (along vector)\n        projectedEntities = skAlongVecProject.projectToSurface(faceList, curveList, adsk.fusion.SurfaceProjectTypes.AlongVectorSurfaceProjectType, rootComp.xConstructionAxis)\n\n        projectedEntities = []\n        # Create a sketch in sub component 3\n        skClosestPtProject = sketches3.add(rootComp.yZConstructionPlane)\n        # sketch project to surface (closest point)\n        projectedEntities = skClosestPtProject.projectToSurface(faceList, curveList, adsk.fusion.SurfaceProjectTypes.ClosestPointSurfaceProjectType)\n        \n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm🔄  Switched to tab 5📄  Extracted from page
+: ```json
+{
+  "code_sample": "#Author-Autodesk Inc. \n#Description-Create a sketch chamfer\n\nimport adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui  = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n        \n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw two point rectangle.\n        lines = sketch.sketchCurves.sketchLines\n        lineList = lines.addTwoPointRectangle(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(5, 5, 0))\n        \n        # Add a distance distance chamfer.\n        line = sketch.sketchCurves.sketchLines.addDistanceChamfer(lineList[0], lineList[0].endSketchPoint.geometry, lineList[1], lineList[1].startSketchPoint.geometry, 1,1)\n        \n        # Add a distance angle chamfer.\n        line = sketch.sketchCurves.sketchLines.addAngleChamfer(lineList[1], lineList[1].endSketchPoint.geometry, lineList[2], lineList[2].startSketchPoint.geometry, 1,1)\n\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm📄  Extracted from page
+: ```json
+{
+  "python_code": "```python\nimport adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui  = app.userInterface\n        \n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n        \n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n\n        # Draw two connected lines.\n        lines = sketch.sketchCurves.sketchLines\n        line1 = lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(3, 1, 0))\n        line2 = lines.addByTwoPoints(line1.endSketchPoint, adsk.core.Point3D.create(1, 4, 0))\n        \n        # Add a fillet.\n        arc = sketch.sketchCurves.sketchArcs.addFillet(line1, line1.endSketchPoint.geometry, line2, line2.startSketchPoint.geometry, 1)\n\n        # Add the geometry to a collection. This uses a utility function that\n        # automatically finds the connected curves and returns a collection.\n        curves = sketch.findConnectedCurves(line1)\n               \n        # Create the offset.\n        dirPoint = adsk.core.Point3D.create(0, .5, 0)\n        offsetCurves = sketch.offset(curves, dirPoint, 0.25)\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))\n```"
+}
+```
+🔄  Switched to tab 6🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm🔄  Switched to tab 7📄  Extracted from page
+: ```json
+{
+  "code_samples": [
+    {
+      "language": "Python",
+      "code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n        \n        # Create a document.\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n \n        product = app.activeProduct\n        design = adsk.fusion.Design.cast(product)\n\n        # Get the root component of the active design\n        rootComp = design.rootComponent\n        \n        # Create a sketch\n        sketches = rootComp.sketches\n        sketch1 = sketches.add(rootComp.yZConstructionPlane)\n        \n        # Create an object collection for the points.\n        points = adsk.core.ObjectCollection.create()\n\n        # Define the points the spline with fit through.\n        points.add(adsk.core.Point3D.create(-5, 0, 0))\n        points.add(adsk.core.Point3D.create(5, 1, 0))\n        points.add(adsk.core.Point3D.create(6, 4, 3))\n        points.add(adsk.core.Point3D.create(7, 6, 6))\n        points.add(adsk.core.Point3D.create(2, 3, 0))\n        points.add(adsk.core.Point3D.create(0, 1, 0))\n\n        # Create the spline.\n        spline = sketch1.sketchCurves.sketchFittedSplines.add(points)\n    \n        # Get sketch lines\n        sketchLines = sketch1.sketchCurves.sketchLines\n        \n        # Create sketch rectangle\n        startPoint = adsk.core.Point3D.create(0, 0, 0)\n        endPoint = adsk.core.Point3D.create(5.0, 5.0, 0)\n        sketchLines.addTwoPointRectangle(startPoint, endPoint)\n        \n        # Get two sketch lines\n        sketchLineOne = sketchLines.item(0)\n        sketchLineTwo = sketchLines.item(1)\n        \n        # Get the profile\n        prof = sketch1.profiles.item(0)\n        \n        # Create an extrusion input\n        extrudes = rootComp.features.extrudeFeatures\n        extInput = extrudes.createInput(prof, adsk.fusion.FeatureOperations.NewBodyFeatureOperation)\n        \n        # Define that the extent is a distance extent of 5 cm\n        distance = adsk.core.ValueInput.createByReal(5.0)\n        # Set the distance extent\n        extInput.setDistanceExtent(False, distance)\n        # Set the extrude type to be solid\n        extInput.isSolid = True\n        \n        # Create the extrusion\n        ext = extrudes.add(extInput)\n   \n        # Get the body with the extrude\n        body = ext.bodies.item(0)\n        \n        # Get a vertex of the body\n        vertex = body.vertices.item(5)\n        \n        # Get a face of the vertex\n        face = vertex.faces.item(0)\n        \n        # Create perpendicular construction axis\n        axes = rootComp.constructionAxes\n        axisInput = axes.createInput()\n        axisInput.setByPerpendicularAtPoint(face, vertex)\n        axis = axes.add(axisInput)\n        \n         # Create construction point\n        points = rootComp.constructionPoints\n        pointInput = points.createInput()\n        pointInput.setByTwoEdges(sketchLineOne, sketchLineTwo)\n        point = points.add(pointInput)\n        \n        # Create construction plane\n        planes = rootComp.constructionPlanes\n        planeInput = planes.createInput()\n        offsetValue = adsk.core.ValueInput.createByReal(3.0)\n        planeInput.setByOffset(prof, offsetValue)\n        plane = planes.add(planeInput)\n        \n        # Create another sketch\n        sketch2 = sketches.add(rootComp.xZConstructionPlane)\n        \n        entities = []\n        entities.append(body) # body\n        entities.append(face) # face\n        entities.append(sketchLineOne) # edge \n        entities.append(vertex) # vertex\n        entities.append(spline) # sketch curve\n        entities.append(axis) # construction axis\n        entities.append(point) # construction point\n        entities.append(plane) # construction plane\n        sketchEntities = sketch2.intersectWithSketchPlane(entities)\n        \n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+    },
+    {
+      "language": "C++",
+      "code": "#include <Core/Application/Application.h>\n#include <Core/Application/Document.h>\n#include <Core/Application/Documents.h>\n#include <Core/Geometry/Point3D.h>\n#include <Core/UserInterface/UserInterface.h>\n#include <Core/Application/ObjectCollection.h>\n#include <Fusion/Components/Component.h>\n#include <Fusion/Construction/ConstructionPlanes.h>\n#include <Fusion/Construction/ConstructionPlane.h>\n#include <Fusion/Construction/ConstructionPlaneInput.h>\n#include <Fusion/Construction/ConstructionAxes.h>\n#include <Fusion/Construction/ConstructionAxis.h>\n#include <Fusion/Construction/ConstructionAxisInput.h>\n#include <Fusion/Construction/ConstructionPoints.h>\n#include <Fusion/Construction/ConstructionPointInput.h>\n#include <Fusion/Construction/ConstructionPoint.h>\n#include <Fusion/Fusion/Design.h>\n#include <Fusion/Sketch/Sketch.h>\n#include <Fusion/Sketch/Sketches.h>\n#include <Fusion/Sketch/SketchCurves.h>\n#include <Fusion/Sketch/SketchLines.h>\n#include <Fusion/Sketch/SketchLine.h>\n#include <Fusion/Sketch/SketchFittedSplines.h>\n#include <Fusion/Sketch/SketchFittedSpline.h>\n#include <Fusion/Sketch/Profiles.h>\n#include <Fusion/Sketch/Profile.h>\n#include <Fusion/Features/Features.h>\n#include <Fusion/Features/ExtrudeFeatures.h>\n#include <Fusion/Features/ExtrudeFeatureInput.h>\n#include <Fusion/Features/ExtrudeFeature.h>\n#include <Fusion/BRep/BRepBodies.h>\n#include <Fusion/BRep/BRepBody.h>\n#include <Fusion/BRep/BRepFaces.h>\n#include <Fusion/BRep/BRepFace.h>\n#include <Fusion/BRep/BRepVertices.h>\n#include <Fusion/BRep/BRepVertex.h>\n\nusing namespace adsk::core;\nusing namespace adsk::fusion;\n\nPtr<UserInterface> ui;\n\nextern \"C\" XI_EXPORT bool run(const char* context)\n{\n    Ptr<Application> app = Application::get();\n    if (!app)\n        return false;\n\n    ui = app->userInterface();\n    if (!ui)\n        return false;\n\n    Ptr<Documents> docs = app->documents();\n    if (!docs)\n        return false;\n\n    // Create a document.\n    Ptr<Document> doc = docs->add(DocumentTypes::FusionDesignDocumentType);\n    if (!doc)\n        return false;\n\n    Ptr<Design> design = app->activeProduct();\n    if (!design)\n        return false;\n\n    // Get the root component of the active design\n    Ptr<Component> rootComp = design->rootComponent();\n    if (!rootComp)\n        return false;\n\n    // Create a new sketch on the yz plane.\n    Ptr<Sketches> sketches = rootComp->sketches();\n    if (!sketches)\n        return false;\n\n    Ptr<ConstructionPlane> yzPlane = rootComp->yZConstructionPlane();\n    if (!yzPlane)\n        return false;\n\n    Ptr<Sketch> yzSketch = sketches->add(yzPlane);\n    if (!yzSketch)\n        return false;\n\n    // Create an object collection for the points.\n    Ptr<ObjectCollection> points = ObjectCollection::create();\n    if (!points)\n        return false;\n\n    // Define the points the spline with fit through.\n    points->add(Point3D::create(-5, 0, 0));\n    points->add(Point3D::create(5, 1, 0));\n    points->add(Point3D::create(6, 4, 3));\n    points->add(Point3D::create(7, 6, 6));\n    points->add(Point3D::create(2, 3, 0));\n    points->add(Point3D::create(0, 1, 0));\n\n    // Create the spline.\n    Ptr<SketchCurves> sketchCurves = yzSketch->sketchCurves();\n    if (!sketchCurves)\n        return false;\n\n    Ptr<SketchFittedSplines> splines = sketchCurves->sketchFittedSplines();\n    if (!splines)\n        return false;\n\n    Ptr<SketchFittedSpline> spline = splines->add(points);\n    if (!spline)\n        return false;\n\n    // Get sketch lines\n    Ptr<SketchLines> sketchLines = sketchCurves->sketchLines();\n    if (!sketchLines)\n        return false;\n\n    // Create sketch rectangle\n    Ptr<Point3D> startPoint = Point3D::create(0, 0, 0);\n    Ptr<Point3D> endPoint = Point3D::create(5.0, 5.0, 0);\n    sketchLines->addTwoPointRectangle(startPoint, endPoint);\n\n    // Get two sketch lines\n    Ptr<SketchLine> sketchLineOne = sketchLines->item(0);\n    Ptr<SketchLine> sketchLineTwo = sketchLines->item(1);\n\n    // Get the profile\n    Ptr<Profiles> profs = yzSketch->profiles();\n    if (!profs)\n        return false;\n\n    Ptr<Profile> prof = profs->item(0);\n\n    // Create an extrusion input\n    Ptr<Features> feats = rootComp->features();\n    if (!feats)\n        return false;\n\n    Ptr<ExtrudeFeatures> extrudes = feats->extrudeFeatures();\n    if (!extrudes)\n        return false;\n\n    Ptr<ExtrudeFeatureInput> extInput = extrudes->createInput(prof, FeatureOperations::NewBodyFeatureOperation);\n\n    // Define that the extent is a distance extent of 5 cm\n    Ptr<ValueInput> distance = ValueInput::createByReal(5.0);\n    // Set the distance extent\n    extInput->setDistanceExtent(false, distance);\n    // Set the extrude type to be solid\n    extInput->isSolid(true);\n\n    // Create the extrusion\n    Ptr<ExtrudeFeature> ext = extrudes->add(extInput);\n    if (!ext)\n        return false;\n\n    // Get the body with the extrude\n    Ptr<BRepBodies> bodies = ext->bodies();\n    if (!bodies)\n        return false;\n\n    Ptr<BRepBody> body = bodies->item(0);\n\n    // Get a vertex of the body\n    Ptr<BRepVertices> vertices = body->vertices();\n    if (!vertices)\n        return false;\n\n    Ptr<BRepVertex> vertex = vertices->item(5);\n\n    // Get a face of the vertex\n    Ptr<BRepFaces> vertexFaces = vertex->faces();\n    if (!vertexFaces)\n        return false;\n    Ptr<BRepFace> face = vertexFaces->item(0);\n\n    // Get construction axes\n    Ptr<ConstructionAxes> constructionAxes = rootComp->constructionAxes();\n    if (!constructionAxes)\n        return false;\n\n    // Create construction axis input\n    Ptr<ConstructionAxisInput> axisInput = constructionAxes->createInput();\n    if (!axisInput)\n        return false;\n\n    // Create perpendicular construction axis\n    axisInput->setByPerpendicularAtPoint(face, vertex);\n    Ptr<ConstructionAxis> axis = constructionAxes->add(axisInput);\n\n    // Get construction points\n    Ptr<ConstructionPoints> constructionPoints = rootComp->constructionPoints();\n    if (!constructionPoints)\n        return false;\n\n    // Create construction point input\n    Ptr<ConstructionPointInput> pointInput = constructionPoints->createInput();\n    if (!pointInput)\n        return false;\n\n    // Create construction point by two points\n    pointInput->setByTwoEdges(sketchLineOne, sketchLineTwo);\n    Ptr<ConstructionPoint> point = constructionPoints->add(pointInput);\n\n    // Create construction plane\n    Ptr<ConstructionPlanes> planes = rootComp->constructionPlanes();\n    if (!planes)\n        return false;\n\n    // Create construction plane input\n    Ptr<ConstructionPlaneInput> planeInput = planes->createInput();\n    if (!planeInput)\n        return false;\n\n    // Add construction plane by offset\n    Ptr<ValueInput> offsetValue = ValueInput::createByReal(3.0);\n    planeInput->setByOffset(prof, offsetValue);\n    Ptr<ConstructionPlane> plane = planes->add(planeInput);\n\n    // Create a new sketch on the xz plane.\n    Ptr<ConstructionPlane> xzPlane = rootComp->xZConstructionPlane();\n    if (!xzPlane)\n        return false;\n\n    Ptr<Sketch> xzSketch = sketches->add(xzPlane);\n    if (!xzSketch)\n        return false;\n\n    std::vector<Ptr<Base>> entities;\n    entities.push_back(body);\n    entities.push_back(face);\n    entities.push_back(sketchLineOne);\n    entities.push_back(vertex);\n    entities.push_back(spline);\n    entities.push_back(axis);\n    entities.push_back(point);\n    entities.push_back(plane);\n\n    std::vector<Ptr<SketchEntity>> resVec = xzSketch->intersectWithSketchPlane(entities);\n    if (resVec.empty())\n        return false;\n\n    return true;\n}\n\n#ifdef XI_WIN\n\n#include <windows.h>\n\nBOOL APIENTRY DllMain(HMODULE hmodule, DWORD reason, LPVOID reserved)\n{\n    switch (reason)\n    {\n    case DLL_PROCESS_ATTACH:\n    case DLL_THREAD_ATTACH:\n    case DLL_THREAD_DETACH:\n    case DLL_PROCESS_DETACH:\n        break;\n    }\n    return TRUE;\n}\n\n#endif // XI_WIN"
+    }
+  ],
+  "description": "Intersects the specified entities with the sketch plane and creates sketch geometry that represents the intersection."
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm🔄  Switched to tab 8📄  Extracted from page
+: ```json
+{
+  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketches = rootComp.sketches;\n        xyPlane = rootComp.xYConstructionPlane\n        sketch = sketches.add(xyPlane)\n        \n        # Get sketch health state\n        health = sketch.healthState\n        if health == adsk.fusion.FeatureHealthStates.ErrorFeatureHealthState or health == adsk.fusion.FeatureHealthStates.WarningFeatureHealthState:        \n            msg = sketch.errorOrWarningMessage\n\n        # Get sketch points\n        sketchPoints = sketch.sketchPoints\n        \n        # Create sketch point\n        point = adsk.core.Point3D.create(1.0, 1.0, 0)\n        sketchPoint = sketchPoints.add(point)\n        \n        # Move sketch point\n        translation = adsk.core.Vector3D.create(1.0, 0, 0)\n        sketchPoint.move(translation)\n\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm🔄  Switched to tab 9📄  Extracted from page
+: ```json
+{
+  "code_sample": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try:\n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        # Create a document.\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n\n        product = app.activeProduct\n        design = adsk.fusion.Design.cast(product)\n\n        # Get the root component of the active design\n        rootComp = design.rootComponent\n\n        # Create a sketch\n        sketches = rootComp.sketches\n        sketch1 = sketches.add(rootComp.yZConstructionPlane)\n        print(sketch1.revisionId)\n\n        # Create an object collection for the points.\n        points = adsk.core.ObjectCollection.create()\n\n        # Define the points the spline with fit through.\n        points.add(adsk.core.Point3D.create(-5, 0, 0))\n        points.add(adsk.core.Point3D.create(5, 1, 0))\n        points.add(adsk.core.Point3D.create(6, 4, 3))\n        points.add(adsk.core.Point3D.create(7, 6, 6))\n        points.add(adsk.core.Point3D.create(2, 3, 0))\n        points.add(adsk.core.Point3D.create(0, 1, 0))\n\n        # Create the spline.\n        spline = sketch1.sketchCurves.sketchFittedSplines.add(points)\n        print(sketch1.revisionId)\n\n        # Get sketch lines\n        sketchLines = sketch1.sketchCurves.sketchLines\n\n        # Create sketch rectangle\n        startPoint = adsk.core.Point3D.create(0, 0, 0)\n        endPoint = adsk.core.Point3D.create(5.0, 5.0, 0)\n        sketchLines.addTwoPointRectangle(startPoint, endPoint)\n        print(sketch1.revisionId)\n\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm🔄  Switched to tab 10📄  Extracted from page
+: ```json
+{
+  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the xy plane.\n        sketch = rootComp.sketches.add(rootComp.xYConstructionPlane)\n\n        # Create an object collection for the points.\n        points = adsk.core.ObjectCollection.create()\n\n        # Define the points the spline with fit through.\n        points.add(adsk.core.Point3D.create(0, 0, 0))\n        points.add(adsk.core.Point3D.create(5, 1, 0))\n        points.add(adsk.core.Point3D.create(6, 4, 3))\n        points.add(adsk.core.Point3D.create(7, 6, 6))\n        points.add(adsk.core.Point3D.create(2, 3, 0))\n        points.add(adsk.core.Point3D.create(0, 1, 0))\n\n        # Create the spline.\n        spline = sketch.sketchCurves.sketchFittedSplines.add(points)\n\n        # Get spline fit points\n        fitPoints = spline.fitPoints\n        \n        # Get the second fit point\n        fitPoint = fitPoints.item(1)\n        \n        # If there is no the relative tangent handle, activate the tangent handle\n        line = spline.getTangentHandle(fitPoint)\n        if line is None:\n             line = spline.activateTangentHandle(fitPoint)\n                \n        # Get the tangent handle           \n        gottenLine = spline.getTangentHandle(fitPoint)\n        \n        # Delete the tangent handle\n        gottenLine.deleteMe()\n\n        # Activate the curvature handle\n        # If the curvature handle activated. the relative tangentHandle is activated automatically\n        activatedArc= spline.activateCurvatureHandle(fitPoint)\n        \n        # Get curvature handle and tangent handle\n        gottenArc= spline.getCurvatureHandle(fitPoint)\n        gottenLine = spline.getTangentHandle(fitPoint)\n        \n        # Delete curvature handle\n        gottenArc.deleteMe();\n\n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0🔗  Opened new tab with https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm🔄  Switched to tab 11📄  Extracted from page
+: ```json
+{
+  "python_code": "import adsk.core, adsk.fusion, traceback\n\ndef run(context):\n    ui = None\n    try: \n        app = adsk.core.Application.get()\n        ui = app.userInterface\n\n        # Create a new document and get the Design.\n        doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)\n        design = app.activeProduct\n\n        # Get the root component of the active design.\n        rootComp = design.rootComponent\n\n        # Create a new sketch on the XY construction plane.\n        sk = rootComp.sketches.add(rootComp.xYConstructionPlane)\n\n        # Get the SketchTexts collection object.\n        texts = sk.sketchTexts\n\n        # Add multi-line text.\n        input = texts.createInput2('This is a long line that is broken automatically.\\n\\nAnd this is a defined line break.', 0.5)\n        input.setAsMultiLine(adsk.core.Point3D.create(0, 0, 0),\n                             adsk.core.Point3D.create(10, 5, 0),\n                             adsk.core.HorizontalAlignments.LeftHorizontalAlignment,\n                             adsk.core.VerticalAlignments.TopVerticalAlignment, 0)\n        texts.add(input)\n\n        # Draw an arc to use to create text along a curve.\n        arc = sk.sketchCurves.sketchArcs.addByThreePoints(adsk.core.Point3D.create(-10, 0, 0),\n                                                          adsk.core.Point3D.create(-5, 3, 0),\n                                                          adsk.core.Point3D.create(0, 0, 0))\n\n        # Create text along the arc.\n        input = texts.createInput2('Text Along a Curve', 0.75)\n        input.setAsAlongPath(arc, False, adsk.core.HorizontalAlignments.CenterHorizontalAlignment, 0)\n        input.isHorizontalFlip = True\n        input.isVerticalFlip = True\n        input.fontName = 'Artifakt Element'\n        texts.add(input)        \n        \n    except:\n        if ui:\n            ui.messageBox('Failed:\\n{}'.format(traceback.format_exc()))"
+}
+```
+🔄  Switched to tab 0I have extracted all 11 python code samples under the Sketches section and stored them. The URLs visited were: 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CircleByCenterRadius_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateCcircleBy3Tangents_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/CreateSketchLines_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/ProjectToSurface_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchChamferSample_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchFilletAndOffset_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchIntersect_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchPointSample_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSample_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchSplineThroughPoints_Sample.htm', 'https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/SketchTextSample_Sample.htm'.
