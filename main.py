@@ -36,7 +36,7 @@ For step1, need to construct a list of {sample_name, sample_url, sample_code=nul
 sample_code is null in step1, it will be filled in step2. 
 
 **Second step**
-Now I need you to go each sample url in step1 and collect sample code for each, so step2 produces 
+Now I need you to go each sample url in step1 and collect sample code for each, so step2  
 fills in the sample_code entry in step1.
 
 Here is how to get a single code sample.
