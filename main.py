@@ -31,14 +31,22 @@ Here is where you get them
 - In the main content area of page, 
   Each link under the heading 'Sketches' (not Design:Sketch)
 
-The final result for step 1 will be a json object with schema [{sample name, sample url}]
+The result for step 1 will be a json object with schema [{sample name, sample url}]
 
 **Second step**
 Now I need you to go the sample urls 1 by 1 in step1 and collect sample code for each. 
+The final result will be a json object with schema [{sample name, sample url, sample code}]
+where [{sample name, sample url}] is what you got from step 1.
 
+Here is how to get a single code sample.
 
-The final result for this step 2 will be a json object with schema [{sample name, sample url, sample code}]
+1. Open a new tab
+2. Go to sample url.
+3. make sure Python tab is selected.
+4. extract sample code
+5. close tab
 
+Please make sure that you only visit a link once. Do not visit  a link you have already visited.
 """
 
 async def run_search():

@@ -171,5 +171,4 @@ cython_debug/
 .pypirc
 history.json
 *.gif
-results.txt
-final_results.txt
+
