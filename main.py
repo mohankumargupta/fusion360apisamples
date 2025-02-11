@@ -23,7 +23,7 @@ This is a 2-step process.
 
 **First step**
 
-First task I need you to do is remember the code sample names and urls.
+First task I need you to do is retrieve code sample names and urls.
 
 Here is where you get them
 
