@@ -17,7 +17,7 @@ llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp', api_key=SecretStr(api
 
 TASK = """
 
-What I need is python code samples under the section name "Sketches"(not Design:Sketch).
+What I need is python code samples in Fusion 360 api documentation website, but only in one category called Sketches.
 
 This is a 2-step process.
 
