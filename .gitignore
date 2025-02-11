@@ -172,5 +172,4 @@ cython_debug/
 history.json
 *.gif
 results.txt
-results.txt
 final_results.txt

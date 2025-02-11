@@ -17,7 +17,7 @@ llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp', api_key=SecretStr(api
 
 TASK = """
 
-What I need is code samples under the section name "Sketchs"(not Design:Sketch).
+What I need is python code samples under the section name "Sketchs"(not Design:Sketch).
 
 This is a 2-step process.
 
@@ -35,7 +35,7 @@ The final result for step 1 will be a json object with schema [{sample name, sam
 
 **Second step**
 Now I need you to go the sample urls 1 by 1 in step1 and collect sample code for each. 
-Remember to click on the Python tab on the sample code page before copying code.
+
 
 The final result for this step 2 will be a json object with schema [{sample name, sample url, sample code}]
 
@@ -50,7 +50,7 @@ async def run_search():
 		max_actions_per_step=4,
 	)
 	
-	history = await agent.run(max_steps=25)
+	history = await agent.run(max_steps=250)
 	h = history.history
 	final_result = history.final_result()
 	
